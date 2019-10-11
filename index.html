@@ -5,13 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title>2018 Player Info</title>
+    <title>Theo Lincke</title>
 	<link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon'/>
     <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-	<link href="../resources/css/my_style.css" rel="stylesheet">
+	<link href="./resources/css/my_style.css" rel="stylesheet">
   </head>
-  <body>
+
+
+
+  <body style="background-color: #FFCC99;">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -22,10 +25,10 @@
 			<a class="nav-link" href="home.html">Home</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">One Link<span class="sr-only">(current)</span></a>
+			<a class="nav-link" href="https://www.linkedin.com/in/theo-lincke/">LinkedIn<span class="sr-only">(current)</span></a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Another Link</a>
+			<a class="nav-link" href="github.com/tlincke125">Github</a>
 		  </li>
 		</ul>
 		<div class="form-inline my-2 my-lg-0">
@@ -34,105 +37,98 @@
 	  </div>
 	</nav>
 
-        <div class="page-header jumbotron">
+        <div class="page-header jumbotron" style="background-color: #FFCC66;" >
           <h1>Theo Lincke</h1>
-          <p>I an American open source software engineers with contributions to the Arch Linux Kernel (bootloader) and a love of UNIX network programming. I specialize in embedded flight software technologies and data transport</p>
+          <p>I an American open source software engineers with a love of UNIX network programming. I specialize in embedded flight software technologies and data transport</p>
         </div>
         <div class="text-center mx-auto">
           <h2>Professional Profile</h2>
           <div class="container">
-            <div class="btn-group" style="padding-top:50px; padding-bottom: 50px;">
-              <a href="https://github.com/tlincke125" class="btn btn-primary active">
-                Github
-              </a>
-            </div>
+            <button type="button" onclick="window.location.href = 'https://github.com/tlincke125'" class="btn btn-success btn-block">
+                <h1>Github</h1>
+            </button>
           </div>
+          <br>
           <div class="container">
-            <img class="img-rounded" src="../resources/imgs/car.gif" height="500" width="400"/>
+            <img class="img-rounded" src="./resources/imgs/car.gif" height="500" width="400"/>
           </div>
         </div>
 
         <div class="container">
           <h3>Featured Projects</h3>
-          <table class="table-bordered">
-          <div class="border row">
-
-            <div class="border col-2">
+          <table class="table table-dark table-bordered">
+            <thead class="thead-dark">
+            <tr>
+              <td>
               <b>Project Name</b>
-            </div>
+              </td>
 
-            <div class="border col-6">
+              <td>
               <b>Description</b>
-            </div>
+              </td>
 
-            <div class="border col-4">
+              <td>
               <b>Technologies</b>
-            </div>
+              </td>
 
-          </div>
-          <div class="row">
+            </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://github.com/curmc/sentinet">Sentinet</a> 
+                </td>
 
-            <div class="border col-2">
-              <a href="https://github.com/curmc/sentinet">Sentinet</a> 
-            </div>
+                <th scope="row">
+                  <p>A Robust Robotic Framework in C++17</p>
+                </th>
 
-            <div class="border col-6">
-              <p>A Robust Robotic Framework in C++17</p>
-            </div>
+                <td>
+                  Modern C++17. UNIX Sockets, ZMQ, Sentinet_message_pkg (see bellow)
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/tlincke125/cTensor">CTensor</a> 
+                </td>
 
-            <div class="border col-4">
-              Modern C++17. UNIX Sockets, ZMQ, Sentinet_message_pkg (see bellow)
-            </div>
+                <th scope="row">
+                  <p>A Neural Network and Linear Algebra Library from the Ground Up in C++11</p>
+                </th>
 
-          </div>
-          <div class="row">
+                <td>
+                  C++ 11 OpenCV4
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/curmc/sentinet_message_pkg">Sentinet Message Package</a>
+                </td>
 
-            <div class="border col-2">
-              <a href="https://github.com/tlincke125/cTensor">CTensor</a> 
-            </div>
+                <th scope="row">
+                  <p>A Crazy Fast Serialization Library</p>
+                </th>
 
-            <div class="border col-6">
-              <p>A Neural Network and Linear Algebra Library from the Ground Up in C++11</p>
-            </div>
+                <td>
+                  Primarily C99 some C11. UNIX Sockets
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/tlincke125/rubiksCube">Rubiks Cube</a> 
+                </td>
 
-            <div class="border col-4">
-              C++ 11 OpenCV4
-            </div>
+                <th scope="row">
+                  <p>An any Dimensional Rubiks Cube Solver</p>
+                </th>
 
-          </div>
-          <div class="row">
-
-            <div class="border col-2">
-            <a href="https://github.com/curmc/sentinet_message_pkg">Sentinet Message Package</a>
-            </div>
-
-            <div class="border col-6">
-              <p>A Crazy Fast Serialization Library</p>
-            </div>
-
-            <div class="border col-4">
-              Primarily C99 some C11. UNIX Sockets
-            </div>
-
-          </div>
-          <div class="row">
-
-            <div class="border col-2">
-            <a href="https://github.com/tlincke125/rubiksCube">Rubiks Cube</a> 
-            </div>
-
-            <div class="border col-6">
-              <p>An any Dimensional Rubiks Cube Solver</p>
-            </div>
-
-            <div class="border col-4">
-              Java
-            </div>
-
-          </div>
+                <td>
+                  Java
+                </td>
+              </tr>
+            <tbody>
           </table>
         </div>
-
 
         <br>
         <div class="container">
