@@ -113,17 +113,13 @@ table, th, td {
                 <img class="img-rounded" src="./resources/imgs/car.gif" height="500" width="400"/>
                 <p>I was the lead embedded software architect for my school's robotics club. We wrote a ROS knock off for fun called sentinet, a faster but more configurable asynchronous message passing library that works over bluetooth, serial, wifi and inproc. This robot is being driven by a wii remote (We wrote the communication protocol, but used wiiuse library to transmit bytes over bluetooth). The input message is being processed (low level automation) by a jetson TX2 in C++, then filtered to a microcontroller (teensy 3.6) using a serial communication and message marshalling library I wrote in C / C++ and sent to the wheels. The purpose of this project was not practical engineering design, it was mostly a learning process to write as much as we could from scratch.</p>
             </div>
+            <h3>The following graphical simulations were built using a nonlinear ode solver I wrote using RK4 and an adaptive time stepping algorithm</h3>
             <div style="padding-top: 50px; padding-bottom: 50px;">
                 <h1>Two body problem with an injected third body</h1>
                 <img class="img-rounded" src="./resources/imgs/coolimage.png"/>
                 <p>By solving the hamiltonian for a two body system, then inserting a third star into the system, I simulated a three star system. As you can see, the two stars orbit each other, then the third star inserts itself into the system and the third and first star eject off in an open hyperbolic trajectory. This is plotted via the center of mass.</p>
             </div>
-            <div style="padding-top: 50px; padding-bottom: 50px;">
-                <h1>A Singular Value Application for Recognizing Faces</h1>
-                <img class="img-rounded" src="./resources/imgs/eigenfaces.png" height="40%" width="40%"/>
-                <img class="img-rounded" src="./resources/imgs/svd.png" height="40%" width="40%"/>
-                <p>Using SVD, we successfully were able to deconstruct faces into an orthogonal basis of vectors. By adjusting certain coefficients of the basis, we reconstructed faces similar to a fourier series for faces. As seen, SVD is a fairly accurate compression tool as well.</p>
-            </div>
+
             <div style="padding-top: 50px; padding-bottom: 50px;">
                 <h1>Some biffurcation diagrams for common chaotic systems</h1>
                 <img class="img-rounded" src="./resources/imgs/henonbifurc.jpeg" height="40%" width="40%"/>
@@ -136,6 +132,12 @@ table, th, td {
                 <img class="img-rounded" src="./resources/imgs/roslerinitcondition.jpeg" height="50%" width="40%"/>
                 <img class="img-rounded" src="./resources/imgs/rossleraccurate.jpeg" height="50%" width="40%"/>
                 <p>These are three interesting chaotic systems (two systems, but the Rosler System is represented with two different initial conditions). These were made using my ode solver using an adaptive time stepping algorithm.</p>
+            </div>
+            <div style="padding-top: 50px; padding-bottom: 50px;">
+                <h1>A Singular Value Application for Recognizing Faces</h1>
+                <img class="img-rounded" src="./resources/imgs/eigenfaces.png" height="40%" width="40%"/>
+                <img class="img-rounded" src="./resources/imgs/svd.png" height="40%" width="40%"/>
+                <p>Using SVD, we successfully were able to deconstruct faces into an orthogonal basis of vectors. By adjusting certain coefficients of the basis, we reconstructed faces similar to a fourier series for faces. As seen, SVD is a fairly accurate compression tool as well.</p>
             </div>
             <div style="padding-top: 50px; padding-bottom: 50px;">
                 <h1>A 10x10 rubiks cube being solved in 77 milliseconds</h1>
