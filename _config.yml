@@ -23,7 +23,7 @@ email: thli2739@colorado.edu
 description: >- # this means to ignore newlines until "baseurl:"
     A Place to showcase some of my undergraduate projects in and out of school
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://tlincke125.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  tlincke125
 instagram_username: tlincke
 
