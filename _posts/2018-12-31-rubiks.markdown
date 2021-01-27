@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "Rubik's Cubes"
+date:   2018-12-31 10:08:15 - 0700
+categories: programming rubiks
+---
+
+See the [Source Code](https://github.com/tlincke125/rubiksCube)
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+</script>
+
+
+
+<center>
+<h4>Resizing window or changing speed / dim will reset Cube</h4>
+
+<div id="canvas"></div>
+
+<div id="container" style="background-color: gray;">
+
+<h2 id="info" style="background-color: gray;"></h2>
+
+<form class="text-center" id="changeDimension" onsubmit="return false;">
+<input class="btn btn-primary mb-2" type="submit" value="Reset" onclick="onSubmitDim()">
+</form>
+
+<form class="text-center" id="changeDimension" onsubmit="return false;">
+<input class="form-control" type="number" id="scale" name="Scale" min="3" max="30" value="3">
+<input class="btn btn-primary mb-2" type="submit" value="Change Dimension" placeholder="3-20" onclick="onSubmitDim()">
+</form>
+
+<form id="changeSpeed" onsubmit="return false;">
+<label for="speed">Change Speed</label>
+<input class="form-control-range" type="range" id="speed" name="Scale" min="0" max="29" value="20" onchange="onSubmitSpeed()">
+</form>
+</div>
+
+<script>
+var cubeSize = 0.8;
+var bufferCubiePercentage = 0.9;
+//colors - [back, left, top, right, bottom, front]
+//[blue, orange, white, red, yellow, green]
+var colors = [
+0x0000ff,
+0xffa500,
+0xffffff,
+0xff0000,
+0xffff00,
+0x00c000
+];
+</script>
+
+<script src="/assets/js/algorithm.js"></script>
+<script src="/assets/js/three.js"></script>
+<script src="/assets/js/OrbitControls.js"></script>
+<script src="/assets/js/SceneUtils.js"></script>
+<script type="text/javascript" src="/assets/js/Cube.js"></script>
+
+
+</center>
+
+# Intro
+A rubik's cube is a group with a set of permutations, inversions, combinatorics etc. In this project, I represented a cube using a 1d array. Why didn't I use a 2d or 3d array? At the time (I've since learned better), I thought a 1d array would be faster than a 2d array in retrieval operations. It was a fun brain exercise to think about accessing indexes on different faces. To index cube i on face j, you would just access index $j * dim^2 + i$.
+
+I Began by encoding the movement operations of a cube. Rotating faces (for front facing faces, this is simply a symmetric transpose operation). Rotating faces was challenging, but once they were perfect, I had a standard library for an nxn cube transformation.
+
+# Solving
+To solve the cube, I didn’t use any fancy / optimized algorithm. There are countless beautiful solutions to the rubik's cube in only a couple of lines of code, but I chose to solve the cube the way I knew before starting the project (one could call it the “beginner human approach”).
+
+# Translating 3x3 to nxn
+If you can solve a 3x3 cube, 4x4 cube and 5x5 cube, you can solve any cube. There are a couple more steps for even / odd cubes, but for the most part 4x4 and 5x5 cubes are fairly simple. The idea is to reduce the cube to a 3x3 cube. Solve the edges and center piece so that the cube takes on the appearance of a 3x3 cube, then solve the 3x3 cube.
+
+# Future
+Day to day, I’ve thought about re writing my code in C++ or C. I am at a point where I could optimize the heck out of the code, but I’ve never had the time to do that and I’ve been distracted by more fascinating problems. So for now, this project is on the back burner. Maybe one day I’ll spend a couple hours re-writing the code and graphics.
+

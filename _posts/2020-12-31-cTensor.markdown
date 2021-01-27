@@ -109,7 +109,7 @@ $$F_{ext}(x) = e^{0.918x} + 0.527$$
 $$F_f(x) = a + bx + cx^2 + dx^3 + ex^4 + fx^5$$
 
 <video width="480" height="320" controls="controls" style="display: block; width: auto; margin: 0 auto;">
-  <source src="/resources/exp_poly_grad_descent.mp4" type="video/mp4">
+  <source src="/assets/videos/exp_poly_grad_descent.mp4" type="video/mp4">
 </video>
 
 <br>
