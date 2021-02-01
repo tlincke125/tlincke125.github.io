@@ -1,0 +1,87 @@
+---
+layout: post
+title:  $\int \frac{1}{x - \sqrt{1 - x^2}}dx$
+date:   2021-02-01 10:08:15 - 0700
+categories: integrals
+---
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+We will solve this on the real line. Notice that $x \in [-1, 1]$ for the solution to be real and $x = \sqrt{\frac{1}{2}}$ is a pole. So I will solve this on the domain $[-1, 1] \setminus \\{\sqrt{\frac{1}{2}}\\}$
+
+Allow $x = sin(t) \in [-1, 1]$, $dx = cos(t)dt$
+
+***
+
+#### Four Usefull Identities:
+
+$$cos(2t) = cos^2(x) - sin^2(x) = 1 - 2sin^2(x) = \boxed{1 - 2x^2} \neq 0$$
+
+$$sin(2t) = 2sin(t)cos(t) = \boxed{2x\sqrt{1 - x^2}} \neq 1$$
+
+$$sec(2t) = \frac{1}{cos(2t)} = \boxed{\frac{1}{1 - 2x^2}}; x\neq\sqrt{\frac{1}{2}}$$
+
+$$tan(2t) = \frac{sin(2t)}{cos(2t)} = \boxed{\frac{2x\sqrt{1 - x^2}}{1 - 2x^2}}; x\neq\sqrt{\frac{1}{2}}$$
+
+***
+
+#### Reduction to 3 Integrals
+
+$$\int \frac{1}{x - \sqrt{1 - x^2}}dx = \int \frac{1}{sin(t) - cos(t)} cos(t) dt$$
+
+$$= \int \frac{sin(t)cos(t) + cos^2(t)}{sin^2(t) - cos^2(t)} dt$$
+
+$$= -\int \frac{\frac{1}{2}sin(2t) + \frac{1}{2}(cos(2t) + 1)}{cos(2t)}dt$$
+
+$$= -\frac{1}{2} \int tan(2t) + 1 + sec(2t) dt$$
+
+
+***
+
+#### Tan integral
+
+$$\int tan(2t) dt = \int \frac{sin(2t)}{cos(2t)} dt$$
+
+$$= -\frac{1}{2}log(|cos(2t)|)$$
+
+$$= -\frac{1}{2}log(|1 - 2x^2|)$$
+
+***
+
+#### Identity Integral
+
+$$\int 1 dt$$
+
+$$= t $$
+
+$$= arcsin(x)$$
+
+***
+
+#### Sec Integral
+
+$$\int sec(2t) dt = \int sec(2t) \frac{sec(2t) + tan(2t)}{sec(2t) + tan(2t)} dt$$
+
+$$= \int \frac{sec^2(2t) + sec(2t)tan(2t)}{sec(2t) + tan(2t)} dt$$
+
+$$= \frac{1}{2} log(|sec(2t) + tan(2t)|)$$
+
+$$= \frac{1}{2} log(|\frac{1 + 2x\sqrt{1 - x^2}}{1 - 2x^2}|)$$
+
+***
+
+#### Final Form
+
+$$\int \frac{1}{x - \sqrt{1 - x^2}}dx = -\frac{1}{2} (\frac{1}{2}log(|\frac{1 + 2x\sqrt{1 - x^2}}{(1-2x^2)^2}|) + arcsin(x))$$
+
+$$ = \boxed{\frac{1}{2}log(|\frac{1 - 2x^2}{\sqrt{1 + 2x\sqrt{1 - x^2}}}|) - \frac{1}{2}arcsin(x) + C}$$

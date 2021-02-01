@@ -1,0 +1,22 @@
+---
+layout: post
+title:  $\int log(\sqrt{x} + \sqrt{x + 1})dx$
+date:   2021-01-31 10:08:15 - 0700
+categories: integrals
+---
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+I have not typed this integral up yet
+
+
+$$ = xlog(\sqrt{x} + \sqrt{x + 1}) $$

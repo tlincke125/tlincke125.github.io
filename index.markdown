@@ -6,7 +6,22 @@ layout: home
 title: Home
 ---
 
-# Welcome
-I'm an American Open Source Software Engineer and Applied Mathematics Student with an interest in nonlinear dynamics, chaos and flight control software. This website is a new project in the works. I would like to spend time blogging about the projects I'm working on; but unfortunately, I never blogged during my projects in the last couple of years so I will be spending some extra time writing about my previous projects - however, going forward into 2021, I hope to update this blog daily.
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-I am currently working on a project revisiting my Machine Learning library I worked on my freshman year "purify" the mathematics a bit as well as optimize the code for modern C++. I will keep each project as a single blog post - updating the post rather than adding a new post.
+
+# Welcome
+I'm an American Open Source Software Engineer and Applied Mathematics Student with an interest in nonlinear dynamics, chaos and flight control software. 
+
+# What to expect
+I can't post every day because of school, but I will try to include one integral problem a day, and at least attempt to update one of my projects. 
+
+# Integrals
+I'm doing one quite challenging integral a day for a couple weeks. I get these integrals from random locations on the internet. I will never get a solution on an integral solver, I will make the solution as pure from my head as possible, therefore, you could expect to find mistakes. Sometimes, I will spend a while on an integral, then give up, but I will still try to write the attempted work and come back to them another day. If I get help online, I will mention that in the post. 
