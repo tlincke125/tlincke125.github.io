@@ -36,6 +36,7 @@ $$ = xlog(\sqrt{x} + \sqrt{x + 1}) - \frac{1}{2}(2\frac{x\sqrt{x + 1}}{\sqrt{x}}
 
 
 ***
+#### A Necessary Integral
 
 Note The Following Integral:
 
@@ -49,14 +50,43 @@ $$ = u\sqrt{u^2 + 1} - I - arcsinh(u)$$
 
 $$ I = \frac{1}{2}(u\sqrt{u^2 + 1} - arcsinh(u)) $$
 
-$$ = \frac{1}{2}(\sqrt{x}\sqrt{x + 1} - arcsinh(\sqrt{x}) $$
+$$ = \frac{1}{2}(\sqrt{x}\sqrt{x + 1} - arcsinh(\sqrt{x})) $$
 
 ***
+#### Putting Everything Together
 
 $$ = xlog(\sqrt{x} + \sqrt{x + 1}) - \frac{1}{2}(2  \frac{x\sqrt{x + 1}}{\sqrt{x}}  - 2(\frac{1}{2}(\sqrt{x}\sqrt{x + 1} - arcsinh(\sqrt{x})))) $$
 
-$$ = xlog(\sqrt{x} + \sqrt{x + 1}) - \frac{x\sqrt{x + 1}}{\sqrt{x}} + \frac{1}{2}\sqrt{x^2 + x} - \frac{1}{2}arcsinh(\sqrt{x})))) $$
+$$ = xlog(\sqrt{x} + \sqrt{x + 1}) - \frac{x\sqrt{x + 1}}{\sqrt{x}} + \frac{1}{2}\sqrt{x^2 + x} - \frac{1}{2}arcsinh(\sqrt{x}) $$
 
-$$ = \boxed{xlog(\sqrt{x} + \sqrt{x + 1}) - \frac{1}{2}\sqrt{x^2 + x} - \frac{1}{2}arcsinh(\sqrt{x})))) + C} $$
+$$ = xlog(\sqrt{x} + \sqrt{x + 1}) - \frac{1}{2}\sqrt{x^2 + x} - \frac{1}{2}arcsinh(\sqrt{x}) $$
 
-Note that the last step removed the removable singularity $x = 0$. So we define the new function on the analytic continuation of $\frac{x}{\sqrt{x}}$ taking value $0$ at $x = 0$, and the function is now well defined at $x = 0$. 
+$$ = \boxed{(x - \frac{1}{2})log(\sqrt{x} + \sqrt{x + 1}) - \frac{1}{2}\sqrt{x^2 + x} + C} $$
+
+***
+#### arcsinh Expressed Algebraically
+
+The last step used the following identity for $arcsinh$:
+
+$$ z = sinh(x) = \frac{e^x - e^{-x}}{2} $$
+
+$$ = \frac{e^x - e^{-x}}{2}\frac{e^x}{e^x} $$
+
+$$ = \frac{e^{2x} - 1}{2e^x} $$
+
+$$ 2ze^x = e^{2x} - 1 $$
+
+$$ (e^{x})^2 - 2z(e^x) - 1 = 0 $$
+
+$$ e^x = \frac{2z + \sqrt{4z^2 + 4}}{2} $$
+
+$$ = z + \sqrt{z^2 + 1} $$
+
+$$ x = arcsinh(z) = log(z + \sqrt{z^2 + 1}) $$
+
+$$ arcsinh(\sqrt{x}) = \boxed{log(\sqrt{x} + \sqrt{x + 1})} $$
+
+***
+#### Poles and Analytic Continuation
+
+The second to last step removed the removable singularity $x = 0$. So we define the new function on the analytic continuation of $\frac{x}{\sqrt{x}}$ taking value $0$ at $x = 0$, and the function is now well defined at $x = 0$. 
