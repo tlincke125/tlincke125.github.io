@@ -59,4 +59,4 @@ $$ = xlog(\sqrt{x} + \sqrt{x + 1}) - \frac{x\sqrt{x + 1}}{\sqrt{x}} + \frac{1}{2
 
 $$ = \boxed{xlog(\sqrt{x} + \sqrt{x + 1}) - \frac{1}{2}\sqrt{x^2 + x} - \frac{1}{2}arcsinh(\sqrt{x}))))} $$
 
-Note that the last step removed the removable singularity $x = 0$. So we define the new function on the analytic continuation of $\frac{x}{\sqrt{x}}$ taking value $0$ at $x = 0$, and the function is now well defined at $x = 0$. 
+Note that the last step removed the 
