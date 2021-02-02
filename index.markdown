@@ -27,3 +27,4 @@ I can't post every day because of school, but I will try to include one integral
 I've been several quite challenging integrals most days for a couple months now. I get these integrals from random locations on the internet. Sometimes, one integral will stand out to me or I will feel like posting how I solved it on this website. I decided to add these relatively recently. Although I may type up some previous integrals, but expect to see integrals comming once in a while starting at the start of Febuary.
 
 My philosophy on these integrals is to never get any help from the internet. I will make the solution as pure from my head as possible, therefore, you could expect to find mistakes. Sometimes, I will spend a while on an integral, then give up, but I will still try to write the attempted work and come back to them another day. If I get help online, I will mention that in the post. 
+
