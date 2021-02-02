@@ -28,13 +28,13 @@ The following graphical simulations were built using a nonlinear ode solver I wr
 <div style="padding-top: 50px; padding-bottom: 50px;">
     <h1>Two body problem with an injected third body</h1>
     <img class="img-rounded" src="/assets/images/coolimage.png"/>
-    <p>By solving the hamiltonian for a two body system, then inserting a third star into the system, I simulated a three star system. As you can see, the two stars orbit each other, then the third star inserts itself into the system and the third and first star eject off in an open hyperbolic trajectory. This is plotted via the center of mass.</p>
+    <p>By solving the hamiltonian for a two body system, then inserting a third star into the system, I simulated a three star system. As you can see, the two stars orbit each other, then the third star inserts itself into the system and the third and first star eject off in an open hyperbolic trajectory. This is plotted via an invariant center of mass.</p>
 </div>
 
 <div style="padding-top: 50px; padding-bottom: 50px;">
     <h1>Some biffurcation diagrams for common chaotic systems</h1>
-    <img class="img-rounded" src="/assets/images/henonbifurc.jpeg" height="40%" width="40%"/>
-    <img class="img-rounded" src="/assets/images/logbifurc.jpeg" height="40%" width="40%"/>
+    <img class="img-rounded" src="/assets/images/henonbifurc.jpeg" height="40%" width="100%"/>
+    <img class="img-rounded" src="/assets/images/logbifurc.jpeg" height="40%" width="100%"/>
     <p>The two images above are really interesting steady state solutions to the logistic and henon map with the transients removed. In order to build these images, I had to simulate the maps a few thousand times with millions of time steps. It was a fairly computationally intensive process, but a very cool result in the end</p>
 </div>
 <div style="padding-top: 50px; padding-bottom: 50px; display: inline-block;">
