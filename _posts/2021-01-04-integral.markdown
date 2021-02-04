@@ -30,7 +30,7 @@ $$x = -i$$
 
 $$\implies c_i\prod_{j=0,j\neq i}^{n}(-i + j) = 1$$
 
-$$\implies c_i(-i)(-i + 1)(-1)...(1)(2)...(n - i) = 1$$
+$$\implies c_i(-i)(-i + 1)(-i + 2)...(-1)...(1)(2)(3)...(n - i) = 1$$
 
 $$\implies c_i(-1)^i(i!)(n-i)! = 1$$
 
@@ -41,4 +41,5 @@ $$=\frac{(-1)^i}{n!} {n\choose i}$$
 $$\sum_{i=0}^{n}c_ilog(|x+i|) + C = \boxed{\frac{1}{n!}\sum_{i=0}^{n}{n \choose i}(-1)^ilog(|x + i|) + C}$$
 
 I thought about manipulating this a bit more to match the binomial formula, but that would make it pretty messy with a nasty product of logarithms in a denominator, so I'll keep it how it is.
+
 
