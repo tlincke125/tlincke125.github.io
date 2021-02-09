@@ -1,0 +1,115 @@
+---
+layout: post
+title:  $\int \frac{1}{1 - xlog(x)}dx$
+date:   2021-02-08 10:08:15 - 0700
+categories: integrals
+---
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+# THIS INTEGRAL IS WRONG - I MADE A SILLY MISTAKE DOING PARTIAL FRACTIONS. I AM STILL WORKING ON IT
+
+This was a really fun integral. I believe it is solved in a couple places on the internet, so I'm not sure if my solution is unique. 
+
+$$= \frac{x}{1 - xlog(x)} - \int (x) \frac{1 + log(x)}{(1 - xlog(x))^2}dx$$
+
+$$u = 1 - xlog(x)$$
+
+$$\implies xlog(x) = 1 - u$$
+
+$$\implies (log(x))e^{log(x)} = 1 - u$$
+
+$$\implies log(x) = W(1 - u)$$
+
+$$\implies x = e^{W(1 - u)}$$
+
+$$du = -(1 + log(x))dx$$
+
+$$= \frac{x}{1 - xlog(x)} + \int \frac{(e^{W(1-u)})}{u^2}du$$
+
+$$= \frac{x}{1 - xlog(x)} - \frac{e^{W(1 - u)}}{u} + \int (\frac{1}{u})(-e^{W(1 - u)})(\frac{d}{d(1 - u)}W(1 - u)))du$$
+
+***
+$$(W(z))'$$
+
+$$W(z)e^{W(z)} = z$$
+
+$$W'(z)e^{W(z)} + W(z)W'(z)e^{W(z)} = 1$$
+
+$$W'(z)(e^{W(z)} + W(z)e^{W(z)}) = 1$$
+
+$$W'(z)(\frac{z}{W(z)} + z) = 1$$
+
+$$W'(z)(\frac{z(1 + W(z))}{W(z)}) = 1$$
+
+$$W'(z) = \frac{W(z)}{z(1 + W(z))}$$
+
+***
+
+$$= \frac{x}{1 - xlog(x)} - \frac{e^{W(1 - u)}}{u} + \int (\frac{1}{u})(-e^{W(1 - u)})\frac{W(1 - u)}{(1 - u)(1 + W(1 - u)})du$$
+
+
+$$= \frac{x}{1 - xlog(x)} - \frac{e^{W(1 - u)}}{u} + \int (\frac{1}{u})(-\frac{(1 - u)}{W(1 - u)})\frac{W(1 - u)}{(1 - u)(1 + W(1 - u)})du$$
+
+$$= \frac{x}{1 - xlog(x)} - \frac{e^{W(1 - u)}}{u} - \int \frac{1}{u(1 + W(1 - u)})du$$
+
+$$A(1 + W(1 - u)) + B(u) = 1$$
+
+$$u = 0 \implies A = \frac{1}{1 + W(1)}$$
+
+$$W(1 - u) = -1 \implies 1 - u = -1e^{-1} \implies u = 1 + \frac{1}{e} \implies B = \frac{1}{1 + \frac{1}{e}}$$
+
+$$= \frac{x}{1 - xlog(x)} - \frac{e^{W(1 - u)}}{u} - \int \frac{A}{u}du - \int \frac{B}{1 + W(1 - u)}du$$
+
+We saw that $\frac{d}{dz}e^{W(z)} = \frac{1}{1 + W(z)}$ indirectly when finding $W'(z)$ and plugging back into the integral.
+
+$$= \frac{x}{1 - xlog(x)} + \frac{e^{W(1 - u)}}{u} - Alog(u) + Be^{W(1 - u)}$$
+
+Now to plug everything back in!
+
+$$= \boxed{\frac{x - e^{W(xlog(x))}}{1 - xlog(x)} - \frac{log(1 - xlog(x))}{1 + W(1)} + \frac{e^{W(xlogx)}}{1 + \frac{1}{e}} + C}$$
+
+***
+
+I want to take a quick look at the solutions to (fg)' = f'g'. Note that if we solve for g, we get:
+
+$$g = Ce^{\int\frac{f'}{f' - f}dx}$$
+
+Because $\frac{1}{1 - xlogx} = \frac{\frac{1}{x}}{\frac{1}{x} - log(x)} = \frac{f'}{f' - f}$,
+
+We can find that:
+
+$$\frac{d}{dx}((log(x))(e^{\frac{x - e^{W(xlog(x))}}{1 - xlog(x)} - \frac{log(1 - xlog(x))}{1 + W(1)} + \frac{e^{W(xlogx)}}{1 + \frac{1}{e}}})) = (\frac{1}{x - x^2log(x)})e^{(...)}$$
+
+Which is a pretty cool trick to find g such that (gf)' = g'f'.
+
+And so we've solved one more integral:
+
+$$\int\frac{1}{x - x^2log(x)}e^{(...)}dx = (log(x))(e^{\frac{x - e^{W(xlog(x))}}{1 - xlog(x)} - \frac{log(1 - xlog(x))}{1 + W(1)} + \frac{e^{W(xlogx)}}{1 + \frac{1}{e}}}) + C$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
