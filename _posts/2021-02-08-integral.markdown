@@ -75,7 +75,7 @@ $$= \frac{x}{1 - xlog(x)} + \frac{e^{W(1 - u)}}{u} - Alog(u) + Be^{W(1 - u)}$$
 
 Now to plug everything back in!
 
-$$= \boxed{\frac{x - e^{W(xlog(x))}}{1 - xlog(x)} + \frac{1 - xlog(x)}{1 + W(1)} + \frac{e^{W(xlogx)}}{1 + \frac{1}{e}} + C}$$
+$$= \boxed{\frac{x - e^{W(xlog(x))}}{1 - xlog(x)} + \frac{log(1 - xlog(x))}{1 + W(1)} + \frac{e^{W(xlogx)}}{1 + \frac{1}{e}} + C}$$
 
 ***
 
