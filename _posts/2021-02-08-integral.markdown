@@ -16,7 +16,8 @@ MathJax.Hub.Config({
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-# THIS INTEGRAL IS WRONG - I MADE A SILLY MISTAKE DOING PARTIAL FRACTIONS. I AM STILL WORKING ON IT
+# INTEGRAL IS NOT COMPLETE
+### I made a very silly mistake assuming the equality of partial fractions. I am still working on this integral
 
 This was a really fun integral. I believe it is solved in a couple places on the internet, so I'm not sure if my solution is unique. 
 

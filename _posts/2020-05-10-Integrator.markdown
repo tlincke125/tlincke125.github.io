@@ -21,6 +21,8 @@ MathJax.Hub.Config({
 # Introduction
 In this project, I designed an adaptive ODE solver using various numerical methods including RK4 and some elementary euler methods. The system takes in arbitrarily large nonlinear differential equation vector functions and produces a time propigating trajectory. See some example systems in ode/systems.py. I simulated some chaotic interactions between three body systems (two body systems do not exhibit chaotic behavior).
 
+Please not that this is not meant to be a rigorous page. 
+
 ## Three Star System
 I investigated the three star pattern and attempt to recreate the results of a niche paper on chaos from [Hut and Bachall](http://articles.adsabs.harvard.edu//full/1983ApJ...268..319H/0000326.000.html). I was unable to perfectly model the figure produced, however, I found some more interesting results and I became curious about the angle of deviation of stars from the third star’s initial condition. The first figure shows my attempt to match the results found in Hut and Bachall. Everything plotted is in normalized units. So the x and y axis are spatial coordinates of a moving reference frame relative to the total center of mass of the three star system.
 
@@ -50,8 +52,6 @@ Every second repetition of the stable period switches between the two sets ((1, 
     <h1>Two body problem with an injected third body</h1>
     <img class="img-rounded" src="/assets/images/biffurcation_small.png"/>
 </div>
-
-I have a mathematical formulation for why I hypothesise the ejection angle stability in these stable bands, but it is only a hypothesis and requires some classical mechanics that I will not discuss in this simplified page.
 
 
 # Further performance increase to the numerical integrator
