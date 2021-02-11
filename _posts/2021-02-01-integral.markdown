@@ -1,8 +1,10 @@
 ---
-layout: post
 title:  $\int \frac{1}{x - \sqrt{1 - x^2}}dx$
-date:   2021-02-01 10:08:15 - 0700
-categories: integrals
+last_modified_at: 2021-02-01
+categories:
+    - Blog
+tags:
+    - integrals
 ---
 
 <script type="text/x-mathjax-config">

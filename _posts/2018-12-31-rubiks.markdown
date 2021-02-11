@@ -1,8 +1,11 @@
 ---
-layout: post
-title:  "Rubik's Cubes"
-date:   2018-12-31 10:08:15 - 0700
-categories: programming rubiks
+title: "Rubik's Cubes"
+last_modified_at: 2018-12-31
+categories:
+    - Blog
+tags:
+    - programming
+    - rubiks
 ---
 
 See the [Source Code](https://github.com/tlincke125/rubiksCube)

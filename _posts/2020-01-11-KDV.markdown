@@ -1,8 +1,8 @@
 ---
-layout: post
-title:  "Solving The KDV Equation Using Inverse Scattering"
+title:  "The KDV Equation"
 date:   2020-01-11 10:08:15 - 0700
 categories: projects
+image: /assets/images/kdv.gif
 ---
 
 See the [paper](https://github.com/tlincke125/portfolio/blob/master/RH_Inverse_Scattering/paper.pdf)
@@ -17,8 +17,13 @@ MathJax.Hub.Config({
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-<div style="padding-top: 50px; padding-bottom: 50px;">
-    <h1>Solving the nonlinear KDV equation using inverse scattering</h1>
-    <img class="img-rounded" src="/assets/images/kdv.gif"/>
-    <p>The gif above is a time propigation of the KDV equation using a unique approach to solving nonlinear equations: inverse scattering, then solving the resulting problem using complex analysis by reframing it as a Reimann Hilbert Problem. </p>
-</div>
+{% capture fig_img %}
+![kdv](/assets/images/kdv.gif)
+{% endcapture %}
+
+<figure>
+  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
+  <figcaption>Solving the nonlinear KDV equation using inverse scattering.</figcaption>
+</figure>
+
+The gif above is a time propigation of the KDV equation using a unique approach to solving nonlinear equations: inverse scattering, then solving the resulting problem using complex analysis by reframing it as a Reimann Hilbert Problem.

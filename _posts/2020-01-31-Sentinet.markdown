@@ -1,25 +1,20 @@
 ---
-layout: post
 title:  "Sentinet"
-date:   2020-01-31 10:08:15 - 0700
-categories: projects
+last_modified_at: 2020-01-31
+categories:
+    - Blog
+tags:
+    - programming
+    - robotics
 ---
 
 See the [source code](https://github.com/curmc/)
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    processEscapes: true
-  }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<figure>
+    <a href="/assets/images/car.gif"><img src="/assets/images/car.gif"></a>
+    <figcaption>Kermit Test Bot with Drifting Wheels Attached</figcaption>
+</figure>
 
 
-<div style="padding-top: 50px; padding-bottom: 50px;">
-    <h1>Kermit Test Bot With Drifting Wheels Attached</h1>
-    <img class="img-rounded" src="/assets/images/car.gif" height="500" width="400"/>
-    <p>We wrote a ROS knock off for fun called sentinet, a faster but more configurable asynchronous message passing library that works over bluetooth, serial, wifi and inproc. This robot is being driven by a wii remote (We wrote the communication protocol, but used wiiuse library to transmit bytes over bluetooth). The input message is being processed (low level automation) by a jetson TX2 in C++, then filtered to a microcontroller (teensy 3.6) using a serial communication and message marshalling library I wrote in C / C++ and sent to the wheels. The purpose of this project was not practical engineering design, it was mostly a learning process to write as much as we could from scratch.</p>
-</div>
+### The Project
+We wrote a ROS knock off for fun called sentinet, a faster but more configurable asynchronous message passing library that works over bluetooth, serial, wifi and inproc. This robot is being driven by a wii remote (We wrote the communication protocol, but used wiiuse library to transmit bytes over bluetooth). The input message is being processed (low level automation) by a jetson TX2 in C++, then filtered to a microcontroller (teensy 3.6) using a serial communication and message marshalling library I wrote in C / C++ and sent to the wheels. The purpose of this project was not practical engineering design, it was mostly a learning process to write as much as we could from scratch.

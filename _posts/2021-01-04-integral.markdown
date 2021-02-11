@@ -1,8 +1,10 @@
 ---
-layout: post
 title:  $\int \frac{1}{x(x + 1)(x + 2)...(x+n)}dx$
-date:   2021-02-04 10:08:15 - 0700
-categories: integrals
+last_modified_at: 2021-02-04
+categories:
+    - Blog
+tags:
+    - integrals
 ---
 
 <script type="text/x-mathjax-config">
@@ -16,7 +18,7 @@ MathJax.Hub.Config({
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-This is a fairly simple integral, but I thought it was quite interesting.
+This is a very easy integral, but I thought it was quite interesting.
 
 #### Decompose it into partial fractions:
 
@@ -40,6 +42,5 @@ $$=\frac{(-1)^i}{n!} {n\choose i}$$
 
 $$\sum_{i=0}^{n}c_ilog(|x+i|) + C = \boxed{\frac{1}{n!}\sum_{i=0}^{n}{n \choose i}(-1)^ilog(|x + i|) + C}$$
 
-I thought about manipulating this a bit more to match the binomial formula, but that would make it pretty messy with a nasty product of logarithms in a denominator, so I'll keep it how it is.
 
 

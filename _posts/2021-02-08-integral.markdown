@@ -1,8 +1,10 @@
 ---
-layout: post
 title:  $\int \frac{1}{1 - xlog(x)}dx$
-date:   2021-02-08 10:08:15 - 0700
-categories: integrals
+last_modified_at: 2021-02-08
+categories:
+    - Blog
+tags:
+    - integrals
 ---
 
 <script type="text/x-mathjax-config">
@@ -16,9 +18,10 @@ MathJax.Hub.Config({
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-# INTEGRAL IS NOT COMPLETE
+# This integral isn't complete yet
 ### I made a very silly mistake assuming the equality of partial fractions. I am still working on this integral
 
+***
 This was a really fun integral. I believe it is solved in a couple places on the internet, so I'm not sure if my solution is unique. 
 
 $$= \frac{x}{1 - xlog(x)} - \int (x) \frac{1 + log(x)}{(1 - xlog(x))^2}dx$$

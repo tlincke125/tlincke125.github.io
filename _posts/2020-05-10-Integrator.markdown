@@ -1,11 +1,19 @@
 ---
-layout: post
-title:  "Nonlinear ODE Integrator"
-date:   2020-05-10 10:08:15 - 0700
-categories: projects
+title:  "Some Chaos and Dynamics"
+header:
+    overlay_image: /assets/images/logbifurc_splash.jpg
+    overlay_filter: rgba(100, 100, 100, 0.5)
+    caption: "A bifurcation diagram for the logistic map"
+    actions:
+        - label: "See the code"
+          url: "https://github.com/tlincke125/nonlinear_ode_solver"
+    show_overlay_excerpt: false
+tags:
+    - projects
+    - math
+    - chaos
+last_modified_at:   2020-05-10
 ---
-
-See the [source code](https://github.com/tlincke125/nonlinear_ode_solver)
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({

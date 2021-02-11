@@ -1,8 +1,11 @@
 ---
-layout: post
 title:  "CTensor - Revisiting Machine Learning"
-date:   2020-12-31 10:08:15 - 0700
-categories: nonlinear ctensor
+last_modified_at: 2020-12-31
+categories:
+    - Blog
+tags:
+    - programming
+    - machine learning
 ---
 
 See the [Source Code](https://github.com/tlincke125/cTensor)
@@ -108,8 +111,9 @@ $$F_{ext}(x) = e^{0.918x} + 0.527$$
 
 $$F_f(x) = a + bx + cx^2 + dx^3 + ex^4 + fx^5$$
 
-<video width="480" height="320" controls="controls" style="display: block; width: auto; margin: 0 auto;">
-  <source src="/assets/videos/exp_poly_grad_descent.mp4" type="video/mp4">
+
+<video controls>
+    <source src="/assets/videos/exp_poly_grad_descent.mp4" type="video/mp4">
 </video>
 
 <br>
