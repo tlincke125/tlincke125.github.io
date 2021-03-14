@@ -26,6 +26,8 @@ We will now prove that under the $d_{engineer}$ metric, $\pi$ as defined by Leib
 
 $$d_{engineer}(x, y) := |\int_{0}^{1}\frac{x + xt^2 - y - yt^2 + t^4(1 - t)^4}{1 + t^2}dt|$$
 
+_Remark_ Don't try and read into this proof very deeply because to begin with my metric is arguably not even a metric. It is not strictly positive definite when you don't yet know that $\frac{22}{7} = \pi$. 
+
 
 ### Proof
 Let $\{a_n\} := \sum_{k = 0}^{N}\frac{4(-1)^k}{2k + 1}$. 
@@ -80,7 +82,7 @@ $$= |\int_{0}^{1}\frac{(x - y)(1 + t^2)}{1 + t^2} + \frac{t^4(1 - t)^4}{1 + x^2}
 
 
 # Integrals!
-These are straight from starred integrals in my notebook, so apologies if there are repeats.
+These are straight from my notebook, so apologies if there are repeats.
 
 No contour integrals - although I suppose some could be solved via complex methods.
 
