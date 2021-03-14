@@ -1,0 +1,235 @@
+---
+title:  Integrals!
+last_modified_at: 2021-02-04
+categories:
+    - Blog
+tags:
+    - integrals
+---
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+## $\frac{22}{7} = \pi$
+In honor of pi day, I dedicate this page to a collection of my favorite integrals I've collected over the past year. I'm chosing 22 easy integrals and 7 hard ones because of the significance of the fraction $\frac{22}{7}$. Some engineers define this fraction to be equal to half of everyone's favorite number: $\pi$. To an astrophysicist, this is a close enough approximation to another favorite constant: $g$. However, before I continue with the integrals, I shall define the metric space $(\mathbf{R}, d_{engineer})$ so that today, of all days, engineers and mathematicians can agree that $\frac{22}{7}$ is indeed equal to $\pi$.
+
+We will now prove that under the $d_{engineer}$ metric, $\pi$ as defined by Leibniz's formula indeed converges to $\frac{22}{7}$. In order to make the physicists feel included, we will make $d_{engineer}$ metric as convoluted as possible.
+
+$$d_{engineer}(x, y) := |\int_{0}^{1}\frac{x + xt^2 - y - yt^2 + t^4(1 - t)^4}{1 + t^2}dt|$$
+
+
+### Proof
+Let $\{a_n\} := \sum_{k = 0}^{N}\frac{4(-1)^k}{2k + 1}$. 
+
+_Remark_: This is indeed Leibniz Formula for pi using the assumed convergent power series of $arctan(x)$. We will define $\pi$ as the limiting value to this series.
+
+We have:
+
+$$d_{engineer}(a_n, \frac{22}{7}) = |\int_{0}^{1}\frac{a_n(1 + t^2) - \frac{22}{7} - \frac{22}{7}t^2 + t^4(1 - t)^4}{1 + t^2}dt|$$
+
+Simplifying this polynomial and using polynomial long division, we get:
+
+$$= |\int_{0}^{1} a_n + t^6 - 4t^5 + 5t^4 - 4t^2 + 4 - \frac{4}{1 + t^2} - \frac{22}{7}dt|$$
+
+Notice that $\|t\| < 1$ so we can use the geometric series for $\frac{4}{1 + t^2}$
+
+$$= |\int_{0}^{1} \sum_{k=0}^{N}\frac{4(-1)^k}{2k + 1} - \sum_{k=0}^{\infty}4(-t)^{2k} + t^6 - 4t^5 + 5t^4 - 4t^2 + 4 - \frac{22}{7}dt|$$
+
+Next Solve the polynomial integral and combine the two series to a lower and upper series:
+
+$$= |\int_{0}^{1} \sum_{k = 0}^{N}(\frac{4(-1)^k}{2k + 1} - 4(-t^{2k})) - \sum_{k=N+1}^{\infty}4(-t)^{2k}dt + \frac{1}{7} - \frac{2}{3} + 1 - \frac{4}{3} + 4 - \frac{22}{7}| $$
+
+Simplify the right hand expression (to 0) and split the integral:
+
+$$= |\int_{0}^{1} \sum_{k = 0}^{N}(\frac{4(-1)^k}{2k + 1} - 4(-t)^{2k})dt - \int_{0}^{1}\sum_{k=N+1}^{\infty}4(-t)^{2k}dt| $$
+
+Integrate the left (finite) sum
+
+$$= |\sum_{k = 0}^{N}(\frac{4(-1)^k}{2k + 1} - \frac{4(-1)^k}{2k + 1}) - \int_{0}^{1}\sum_{k=N+1}^{\infty}4(-t)^{2k}dt| $$
+
+Left Series is 0, now we can integrate the infinite series because of uniform convergence on the open set $(-1, 1)$:
+
+$$= |- \int_{0}^{1}\sum_{k=N+1}^{\infty}4(-t)^{2k}dt|$$
+
+And set it less than some arbitrarily small real number $\epsilon$:
+
+$$= |- \sum_{k=N+1}^{\infty}\frac{4(-1)^{k}}{2k + 1}| < \epsilon$$
+
+This is a very easy inequality because we know the sum converges, so the tail grows arbitrarily close to $0$, so $\exists N$ such that $d_{engineer}(a_n, \frac{22}{7}) < \epsilon$.
+
+_Remark_: 
+
+This is not so much of a convoluted problem as it may seem. All I'm doing is defining:
+
+$$d_{engineer}(x, y) = |x - y + (\frac{22}{7} - \pi)|$$
+
+Using an [interesting integral](https://en.wikipedia.org/wiki/Proof_that_22/7_exceeds_%CF%80), we can say:
+
+$$d_{engineer}(x, y) = |x - y + \int_{0}^{1}\frac{t^4(1 - t)^4}{1 + x^2}dx|$$
+
+$$= |\int_{0}^{1}\frac{(x - y)(1 + t^2)}{1 + t^2} + \frac{t^4(1 - t)^4}{1 + x^2}dx|$$
+
+
+# Integrals!
+
+
+No contour integrals - although I suppose some could be solved via complex methods.
+
+I got a lot of these (mostly the hard ones) from a book by Valean "(Almost) Impossible Integrals, Sums, and Series". 
+
+# 22 Easy Integrals
+
+# 0 
+
+A familiar integral
+
+$$\int_{0}^{1}\frac{t^4(1 - t^4)}{1 + t^4}dt$$
+
+# 1 
+Just a bunch of clever algebra. I like this one because there are two (almost indistinguishable) solutions, but only one is correct. 
+
+$$\int log(\sqrt{x} + \sqrt{x + 1})dx$$
+
+# 2
+Still at the phase where it's just a lot of algebra. A fun substitution on the correct domain.
+
+$$\int\frac{1}{x - \sqrt{1 - x^2}}dx$$
+
+# 3
+This is likely one of the easiest. Fairly tedious in my opinion
+
+$$\int arcsin^2(x)dx$$
+
+# 4 
+Pretty interesting function - if you notice what it is!
+
+$$\int \frac{1}{1 - tan^2(x)}$$
+
+# 5
+Clever use of fractions. This is an interesting function if you take n to $\infty$.
+
+$$\int \frac{1}{x(x + 1)(x + 2)...(x+n)}dx$$
+
+# 6
+An interesting elementary integral
+
+$$\int_{0}{1}\frac{1}{(1 + yx)\sqrt{1 - x^2}}dx$$
+
+# 7
+A very helpful integral for future problems with logarithms 
+
+$$\int_{0}^{1}x^mlog^n(x)dx$$
+
+# 8
+A fairly simple integral
+
+$$\int arcsin(\sqrt{x})dx$$
+
+# 9
+A clever one from MIT integration bee
+
+$$\int \sqrt{x + \sqrt{x + \sqrt{ x + .....}}} dx$$
+
+# 10
+A fairly easy (obvious) substitution
+
+$$\int \frac{2e^{2x} - e^x}{\sqrt{3e^{2x} - 6e^x - 1}}dx$$
+
+# 11
+You could do this with partial fractions; but you probably shouldn't
+
+$$\int\frac{1}{x^7 - x}dx$$
+
+# 12
+Similar to a previous one. This one is tricky if you want to be formal and make sure log has a positive domain
+
+$$\int log(x^2 + x + 1)dx$$
+
+# 13
+
+$$\int x\sqrt{\frac{1 - x^2}{1 + x^2}}dx$$
+
+# 14
+
+$$\int \sqrt{1 - x^2}dx$$
+
+# 15
+
+$$\int x^2 \sqrt{1 - x^2}dx$$
+
+# 16
+
+$$\int x^{\frac{3}{2}}log(x)dx$$
+
+# 17
+
+$$\int sin^2(x)cos^4(x)dx$$
+
+# 18
+
+$$\int \frac{1}{2 + 2cosx + sinx}dx$$
+
+# 19
+From papa flammy
+
+$$\int \frac{1}{1 - sin(x)cos(x)}dx$$
+
+# 20
+
+$$\int \frac{xe^{x^2}}{1 + e^{2x^2}}dx$$
+
+# 21
+My favorite function of all time. $W(x) = y \implies x = ye^y$
+
+$$\int W(x) dx$$
+
+
+
+
+# 7 Hard Integrals 
+These are all from the springer book. I haven't gotten very far into this book yet, these are _hard_. I'm including the solutions, but that doesn't always help. Take these with a grain of salt. I am including my favorite, but I also don't want them to have pre requisite integrals that you need to solve first. If you really get stuck, I suggest taking a look at the springer book and solving all the integrals before the problem. (These aren't ordered)
+
+## 0
+A nice general formula for logarithm integrals, helpful in the future
+
+$$\int_{0}^{a}x^mlog^n(x)dx = a^{m+1}\sum_{k=1}^{n}(-1)^k{n \choose k}\frac{k!}{(m+1)^{k+1}}$$
+
+## 1
+Possibly harder than the next one, but fun use of the zeta function
+
+$$\int_{0}^{x}\frac{log^2(1- t)}{t}dt = log(x)log^2(1 + x)-\frac{2}{3}log^3(1+x)-2log(1+x)Li_2(\frac{1}{1+x})-2Li_3(\frac{1}{1+x})$$
+
+## 2
+This one's a classic
+
+$$\int_{0}^{1}\frac{log^2(1+x)}{x}dx = \frac{1}{4}\zeta(3)$$
+
+## 3
+A nice trio
+
+$$\int_{0}^{1}log^2(1-x)log^2(1+x)dx = 24 - 8\zeta{2} - 8\zeta{3} - \zeta{4}+8log(2)\zeta(2)-4log^2(2)\zeta(2)+8log(2)\zeta(3)$$
+
+## 4
+$$\int_{0}^{x}\frac{log^2(1 - t)}{t}dt$$
+
+## 5
+$$\int_{0}^{1}\frac{1}{(1 + yx)\sqrt{1 - x^2}} = \frac{arcos(y)}{\sqrt{1 - y^2}} \quad y \in (-1, 1)$$
+
+## 6
+You know shit got real when we have sums of zeta functions
+
+$$\int_{0}^{1}\frac{log(1 - x)log^{2n}(x)log(1 + x)}{x}dx$$
+
+Solution: $$\frac{1}{2}(2n)!(1 - \frac{1}{2^{2n + 1}})(\sum_{k = 1}^{2n}\zeta(k + 1)\zeta(2n - k + 2)$$
+$$-(2n)!\sum_{k=1}^{n}(1 - \frac{1}{2^{2k - 1}})\zeta(2k)\zeta(2n - 2k + 3)$$
+$$+ \frac{1}{2^{2n + 3}}(2n + 3 - 2^{2n+3})(2n)!\zeta(2n + 3)$$
+
