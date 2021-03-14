@@ -80,7 +80,7 @@ $$= |\int_{0}^{1}\frac{(x - y)(1 + t^2)}{1 + t^2} + \frac{t^4(1 - t)^4}{1 + x^2}
 
 
 # Integrals!
-
+These are straight from starred integrals in my notebook, so apologies if there are repeats.
 
 No contour integrals - although I suppose some could be solved via complex methods.
 
@@ -197,6 +197,8 @@ $$\int W(x) dx$$
 
 # 7 Hard Integrals 
 These are all from the springer book. I haven't gotten very far into this book yet, these are _hard_. I'm including the solutions, but that doesn't always help. Take these with a grain of salt. I am including my favorite, but I also don't want them to have pre requisite integrals that you need to solve first. If you really get stuck, I suggest taking a look at the springer book and solving all the integrals before the problem. (These aren't ordered)
+
+The solutions are what I have written, so check the springer book for mistakes.
 
 ## 0
 A nice general formula for logarithm integrals, helpful in the future
